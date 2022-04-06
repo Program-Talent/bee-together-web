@@ -1,0 +1,14 @@
+#procurarMusica {
+    width: 25vw;
+    height: 3vw;
+    left: 74.5%;
+    position: relative;
+}
+
+#telaPesquisa{
+    border: 1px solid black;
+    width: 25vw;
+    height: 42.8vw;
+    left: 74.5%;
+    position: relative;
+}
