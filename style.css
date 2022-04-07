@@ -1,14 +1,25 @@
-#procurarMusica {
-    width: 25vw;
-    height: 3vw;
-    left: 74.5%;
-    position: relative;
+html, body { height: 100%; width: 100%;}
+
+#ossoPlayer {
+    background-color: greenyellow;
+    height: 30%;
+    width: 80%;
 }
 
-#telaPesquisa{
-    border: 1px solid black;
-    width: 25vw;
-    height: 42.8vw;
-    left: 74.5%;
-    position: relative;
+#ossoPlateia {
+    background-color: rgb(47, 255, 245);
+    height: 80%;
+    width: 80%;
+}
+
+#ossoReacoes {
+    background-color: rgb(189, 47, 255);
+    height: 20%;
+    width: 20%;
+}
+
+#ossoPesquisa {
+    background-color: rgb(255, 252, 47);
+    height: 20%;
+    width: 20%;
 }

@@ -3,14 +3,14 @@ function aaa (){
 }
 window.onload = function () {
     var example2 = new Vue({
-        el: '#example',
+        el: '#overview',
         data: {
-            criterioPesquisa: 'Vue.js'
+            criterioPesquisa: ""
         },
         // define métodos dentro do objeto `methods`
         methods: {
             teste: function (event) {
-                criterioPesquisa = "";
+                this.criterioPesquisa = "";
             }
         }
     })
