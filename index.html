@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/googleapis@100.0.0/build/src/index.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +15,38 @@
 </head>
 <body>
     
-    <div id="esqueleto">
+    <div id="corpoDireito" class="esqueleto">
         <div id="ossoPlayer">Player</div>
         <div id="ossoPlateia">Plateia</div>
         <div id="ossoReacoes">Reacoes</div>
-        <div id="ossoPesquisa">Pesquisa</div>
     </div>
+
+    <div id="corpoEsquerdo" class="esqueleto">
+        <div id="ossoPesquisa">
+            <div id="estruturaPlaylist" :style="{display: apresentaPlaylist}">
+                <div id="playlist">
+                    Playlist
+                </div>
+                <button id="adicionarPlaylist" 
+                v-on:click="adicionaMusica"
+                type="button" class="btn btn-secondary">Adicionar musica na playlist</button>
+            </div>
+            <div id="estruturaPesquisa" :style="{display: apresentaMusica}">
+                <div id="resultadoPesquisa">
+                    <div id="topoPesquisa">
+                        <div id="topoPesquisaX" v-on:click="voltaPlaylist">X</div>
+                        <div id="topoPesquisaTitulo">
+                            Pesquisa...
+                        </div>
+                    </div>
+                    Resultado
+                </div>
+                <input type="text" class="form-control" id="barraPesquisa"
+                v-model="criterioPesquisa" 
+                name="titulo" id="tituloMusica" placeholder="Digite a musica que você quer adicionar na fila">
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
-
-<!-- ********************************
- <input type="text" class="form-control" 
-                    v-on:keyup.enter="teste" 
-                    v-on:blur.enter="teste"
-                    v-model="criterioPesquisa" 
-                name="titulo" id="tituloMusica" placeholder="Digite a musica que você quer adicionar na fila">
--->
