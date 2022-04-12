@@ -70,6 +70,7 @@ body, html {
 #adicionarPlaylist {
     height: 10%;
     width: 100%;
+    text-overflow: "...";
 }
 
 #topoPesquisa {
@@ -81,8 +82,8 @@ body, html {
     width: 20%;
     height: 100%;
     color: white;
-    padding-top: 4%;
-    padding-left: 7%;
+    padding-top: 6%;
+    padding-left: 8%;
     font-size: 150%;
     text-overflow: "…";
     float: left;

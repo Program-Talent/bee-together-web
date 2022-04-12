@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/googleapis@100.0.0/build/src/index.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <meta charset="UTF-8">
@@ -29,7 +28,7 @@
                 </div>
                 <button id="adicionarPlaylist" 
                 v-on:click="adicionaMusica"
-                type="button" class="btn btn-secondary">Adicionar musica na playlist</button>
+                type="button" class="btn btn-secondary">Adicionar</button>
             </div>
             <div id="estruturaPesquisa" :style="{display: apresentaMusica}">
                 <div id="resultadoPesquisa">
@@ -42,7 +41,7 @@
                     Resultado
                 </div>
                 <input type="text" class="form-control" id="barraPesquisa"
-                v-model="criterioPesquisa" 
+                v-model="criterioPesquisa" v-on:keyup="escreveuMusica"
                 name="titulo" id="tituloMusica" placeholder="Digite a musica que você quer adicionar na fila">
             </div>
         </div>
